@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*-------------------Header---------------------
+ * EnemyController.cs
+ * Laurence Smith
+ * 101119045
+ * Date Last Modified: 24-10-2020
+ * Controls Enemy movement and behaivour
+ * Changed movement from horizontal to vertical
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

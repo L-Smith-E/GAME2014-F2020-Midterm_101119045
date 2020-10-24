@@ -1,4 +1,14 @@
-﻿using System.Collections;
+﻿/*-------------------Header---------------------
+ * PlayerController.cs
+ * Laurence Smith
+ * 101119045
+ * Date Last Modified: 24-10-2020
+ * Controls player movement
+ * Added additional variables
+-> Changed Vector parameters
+-> Added new if staements for y value controls
+ */
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEditor;

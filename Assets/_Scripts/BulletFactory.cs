@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*-------------------Header---------------------
+ * BulletFactory.cs
+ * Laurence Smith
+ * 101119045
+ * Date Last Modified: 24-10-2020
+ * Manages Bullet Types and inheritance
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*-------------------Header---------------------
+ * BackgroundController.cs
+ * Laurence Smith
+ * 101119045
+ * Date Last Modified: 24-10-2020
+ * Controls scrolling of background
+ * Changed transform from a vertical movement to a horizontal movement along x axis.
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

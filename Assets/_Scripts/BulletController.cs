@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*-------------------Header---------------------
+ * BulletController.cs
+ * Laurence Smith
+ * 101119045
+ * Date Last Modified: 24-10-2020
+ * Controls the Physics of Projectiles
+ * Changed trajectory to moving horizontally instead of vertically
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
