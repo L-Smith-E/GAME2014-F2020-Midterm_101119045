@@ -15,9 +15,9 @@ public class PlayerController : MonoBehaviour
     public float verticalBoundary;
 
     [Header("Player Speed")]
-    public float horizontalSpeed;
+    //public float horizontalSpeed;
     public float maxSpeed;
-    public float horizontalTValue;
+    //public float horizontalTValue;
     public float verticalSpeed;
     public float verticalTValue;
 
@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         _Move();
-        _CheckBounds();
+       // _CheckBounds();
         _FireBullet();
     }
 
@@ -103,23 +103,23 @@ public class PlayerController : MonoBehaviour
         //    direction = -1.0f;
         //}
 
-        if (Input.GetAxis("Vertical") >= 0.1f)
-        {
-            direction = 1.0f;
-        }
+        //if (Input.GetAxis("Vertical") >= 0.1f)
+        //{
+        //    direction = 1.0f;
+        //}
 
-        if (Input.GetAxis("Vertical") <= -0.1f)
-        {
-            direction = -1.0f;
-        }
+        //if (Input.GetAxis("Vertical") <= -0.1f)
+        //{
+        //    direction = -1.0f;
+        //}
 
-        if (m_touchesEnded.x != 0.0f)
+        if (m_touchesEnded.y != 0.0f)
         {
-           transform.position = new Vector2(Mathf.Lerp(transform.position.y, m_touchesEnded.y, verticalTValue), transform.position.y);
+           transform.position = new Vector2(transform.position.x, Mathf.Lerp(transform.position.y, m_touchesEnded.y, verticalTValue));
         }
         else
         {
-            Vector2 newVelocity = m_rigidBody.velocity + new Vector2(direction * verticalSpeed, 0.0f);
+            Vector2 newVelocity = m_rigidBody.velocity + new Vector2(0.0f, direction * verticalSpeed);
             m_rigidBody.velocity = Vector2.ClampMagnitude(newVelocity, maxSpeed);
             m_rigidBody.velocity *= 0.99f;
         }
@@ -127,16 +127,17 @@ public class PlayerController : MonoBehaviour
 
     private void _CheckBounds()
     {
-        // check right bounds
+        // check top bounds
         if (transform.position.y >= verticalBoundary)
         {
-            transform.position = new Vector3(verticalBoundary, transform.position.y, 0.0f);
+            transform.position = new Vector3(horizontalBoundary, transform.position.y, 0.0f);
         }
 
-        // check left bounds
+        // check bottom bounds
         if (transform.position.y <= -verticalBoundary)
         {
-            transform.position = new Vector3(-verticalBoundary, transform.position.y, 0.0f);
+           
+            transform.position = new Vector3(horizontalBoundary, transform.position.y, 0.0f);
         }
 
     }

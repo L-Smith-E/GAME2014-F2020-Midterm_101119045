@@ -99,7 +99,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   verticalSpeed: 4
   verticalBoundary: 5.1
+  horizontalSpeed: 4
+  horizontalBoundary: 0
   bulletManager: {fileID: 0}
+  damage: 0
 --- !u!50 &7795625368583098000
 Rigidbody2D:
   serializedVersion: 4
